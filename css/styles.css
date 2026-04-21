@@ -1,0 +1,83 @@
+/* Global Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #666;
+  background-image: url("seashell_pyrography.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.emily-candy {
+  font-family: "Emilys Candy", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Links */
+.nav__links {
+  list-style: none;
+}
+
+/* Mi estilo aquí */
+
+.alineado {
+  text-align-last: center;
+}
+
+.decorado {
+  text-decoration: underline;
+}
+
+.grande {
+  font-size: 24px;
+}
+
+.negrita {
+  font-weight: bold;
+}
+
+.color-nombre {
+  color: red;
+}
+
+.colo-hexa {
+  color: #c31fff;
+}
+
+.color-nombre,
+.colo-hexa,
+p {
+  font-size: 8px;
+}
+
+header {
+  background-color: #b3d9ff; /* Fondo oscuro */
+}
+
+.caja {
+  width: 300px;
+  height: 150px;
+  background-color: rgb(171, 254, 69);
+}
+
+.cuadro {
+  width: 100vw; /* 100% del ancho de la pantalla */
+  height: 50vh; /* 50% del alto de la pantalla */
+  background-color: lightcoral;
+}
+
+footer {
+  background-color: #e985ff; /* Fondo claro */
+}
