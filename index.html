@@ -5,99 +5,180 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pre Entrega 2026 - Curso Talento Tech</title>
     <link href="css/styles.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="nav">
         <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Acerca de</a></li>
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="#">* Inicio</a></li>
+          <li><a href="#">* Acerca de</a></li>
+          <li><a href="#">* Productos</a></li>
+          <li><a href="#contactos">* Contacto</a></li>
         </ul>
       </nav>
-
-      <h1 class="emily-candy">Valya PyroArt</h1>
-
-      <h2>
-        Hola People... soy Valya y me dedico a hacer trabajos artesanales
-        Pirograbados en madera
-      </h2>
-      
-      <div class="cuadro">
-          <h2>Mis trabajos</h2>
-          <br />
-          <p class="">Te interesan? Pongamonos en contacto!</p>
-        </div>
-      
-      <br />
-      
-        <h3>Estoy haciendo este sitio para el curso que dicta:</h3>
-
-      <img src="img/logo.png" alt="Profe Nico de TT" style="width: 25%" />
-
-      <label>Fig.1 - Profe Nico de Talento Tech.</label>
+      <h1 class="logo">
+        <img src="img/Logo_Valya_PyroArt.jpg" alt="Pyro1" />
+      </h1>
     </header>
     <main>
-      <section>
-        <div class="cuadro">
-          <form action="192.168.1.1" method="post">
-            <table border="1">
-              <tr>
-                <label id="nombre">Nombre:</label>
-                <input type="text" />
-                <label id="apellido">Apellido:</label>
-                <input type="text" />
-                <label id="edad">Edad:</label>
-                <input type="number" />
-                <label id="email">Email:</label>
-                <input type="email" />
-                <label id="mensaje">Mensaje:</label>
-                <input type="text" />
-              </tr>
-            </table>
-          </form>
+      <h1 class="emily-candy">~ Valya PyroArt ~</h1>
+
+      <br />
+
+      <h3>Hola People... soy Valya y me dedico a hacer trabajos artesanales</h3>
+      <div class="body-container">
+        <section class="loop" id="loop">
+          <h5>
+            El <strong>pirograbado en madera</strong> es una técnica artística
+            que utiliza un pirógrafo (herramienta eléctrica con puntas metálicas
+            calientes) para quemar diseños, letras o sombras sobre madera,
+            creando marcas indelebles y rústicas. Es un arte que permite
+            personalizar superficies, requiriendo control de la temperatura,
+            presión y velocidad para lograr distintos tonos.
+          </h5>
+
+           <br />
+
+          <div class="caja">
+            <div>
+              <h4>Aspectos Clave:</h4>
+              <ul>
+                <li>
+                  <strong>Herramienta:</strong> El pirógrafo es similar a un
+                  soldador de estaño con puntas intercambiables para diferentes
+                  trazos.
+                </li>
+                <li>
+                  <strong>Maderas Recomendadas:</strong> Se prefieren maderas
+                  claras y blandas como tilo, pino, abedul o fresno, ya que
+                  permiten un mejor contraste y son más fáciles de quemar.
+                </li>
+                <li>
+                  <strong>Preparación:</strong> La madera debe estar lijada y
+                  limpia. El diseño se puede transferir usando papel de calcar,
+                  papel carbón, o papel cebolla repasando con un lápiz blando
+                  (5B).
+                </li>
+              </ul>
+            </div>
+
+            <div class="loop-box">
+              <video autoplay muted loop playsinline class="loop-video">
+                <source src="video/pyro-mate.mp4" type="video/mp4" />
+                Tu navegador no soporta video HTML5... pero el mío si.
+              </video>
+            </div>
+
+            <div>
+              <h4>Técnica:</h4>
+              <ul>
+                <li>
+                  <strong>Líneas:</strong> Se logra pasando la punta lentamente;
+                  mayor presión y menor velocidad producen líneas más oscuras y
+                  profundas.
+                </li>
+                <li>
+                  <strong>Sombreado:</strong> Se realiza usando puntas planas
+                  (tipo cuña) y moviéndolas suavemente, variando la temperatura
+                  para conseguir tonos claros u oscuros.
+                </li>
+                <li>
+                  <strong>Seguridad:</strong> Es fundamental usar un pirógrafo
+                  con regulador de temperatura, trabajar en un área ventilada y
+                  utilizar guantes de protección para evitar quemaduras.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="cuadro">
+        <h2 class="emily-candy">Mis trabajos</h2>
+
+        <div class="arte">
+          <img src="img/pyro1.jpg" alt="Pyro1" />
+          <img src="img/pyro2.jpg" alt="Pyro2" />
+          <img src="img/pyro3.jpg" alt="Pyro3" />
+          <!-- <img src="img/pyro-varios.png" alt="Pyro varios" /> -->
         </div>
 
-        <div class="caja">
-          <h2>Bienvenido</h2>
-          <p class="alineado color-nombre">Contenido principal</p>
-          <br />
-          <p class="decorado color-hexa">Lorem ipsum dolor sit amet.</p>
-          <br />
-          <p class="grande color-nombre">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-            est?
-          </p>
-          <br />
-          <p class="negrita color-hexa">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad enim ex
-            blanditiis voluptatibus fuga autem.
-          </p>
-          <br />
-          <p class="">Bla bla blaaa</p>
+        <h4 class="animate__animated animate__bounce">
+          Te interesan? Pongamonos en contacto!
+        </h4>
+      </div>
+
+      <section class="form" id="contactos">
+        <div class="cubo">
+          <form action="192.168.1.1" method="post">
+            <input type="text" placeholder="Tu Nombre" required />
+
+            <input type="email" placeholder="Tu E-mail" required />
+
+            <input type="tel" placeholder="Tu Teléfono" />
+
+            <textarea placeholder="Tu Mensaje" required></textarea>
+
+            <button type="submit" class="btn-redondeado">Enviar Mensaje</button>
+          </form>
         </div>
 
         <iframe
           title="mapa"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52562.853168645815!2d-58.44815464250487!3d-34.57435417770746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3355293a63ce7%3A0x309f4bbc33b5cc64!2sTerminal%20de%20Cruceros%20Quinquela%20Mart%C3%ADn!5e0!3m2!1ses!2sar!4v1775001171091!5m2!1ses!2sar"
-          width="600"
-          height="450"
-          style="border: 0; height: 50%"
+          style="border: 0; width: 100%"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
-        <p class="">Clases - Martes y Jueves - Cuadro (frame)</p>
       </section>
     </main>
 
     <footer>
-      Seguime y te sigo:
+      <div class="footer-container">
+        <!-- Columna 1 -->
+        <div class="footer-box">
+          <h3>Estoy haciendo este sitio para el curso que dicta:</h3>
+          <img
+            src="img/fotos_logo.png"
+            alt="Profe Nico de TT"
+            style="width: 35%"
+          />
 
-      <p class="negrita">FB (Facebook) | IG (Instagram) | LI (LinkedIn)</p>
-      
-      Copy Left @Valetchka 2026 - Buenos Aires ~ Argentina 
+          <label>Fig.1 - Profe Nico de Talento Tech.</label>
+
+          <h6 class="texto">Clases - Martes y Jueves - Cuadro (frame)</h6>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="footer-box">
+          <h3><i>Seguime y te sigo:</i></h3>
+          <div class="social-links">
+            <a href="#">FB (Facebook)</a>
+            <a href="#">IG (Instagram)</a>
+            <a href="#">YT | YouTube</a>
+            <a href="#">LI (LinkedIn)</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom" align="center">
+        <h3 class="emily-candy">
+          Copy Left @Valetchka 2026 - Buenos Aires ~ Argentina
+        </h3>
+      </div>
     </footer>
   </body>
 </html>
