@@ -1,6 +1,21 @@
 # Pagina curso Talento Tech: Font End y JS
 *(Realizar una pagina web dinámica)*
 
+Estructura proyecto/
+
+├── index.html
+├── css/
+│   └── styles.css
+├── img/
+│   ├── Logo_Valya_PyroArt.jpg
+│   ├── pyro1.jpg
+│   ├── pyro2.jpg
+│   ├── pyro3.jpg
+│   ├── pyrography.png
+│   └── fotos_logo.png
+└── video/
+    └── pyro-mate.mp4
+
 ## 🛠️ Tecnologías Utilizadas
 *   [Lenguaje/Framework] - HTML, CSS, JavaScript
 *   [Herramienta] - Visual Studio Code, Notepad++, Phoenix Code.

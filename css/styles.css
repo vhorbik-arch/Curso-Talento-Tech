@@ -1,232 +1,394 @@
-/* Global Styles */
-
-@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Schoolbell&display=swap');
+/* =====================================================
+   ESTILOS GLOBALES Y RESET
+   El * significa "aplicar a todos los elementos".
+   Borramos márgenes y rellenos por defecto del navegador
+   para que todo parta desde cero y se vea igual en Chrome,
+   Firefox, Edge, etc.
+   ===================================================== */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* box-sizing: border-box hace que el padding no agrande
+     el elemento: queda todo adentro del tamaño definido */
 }
 
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6em;
-  color: #666;
-  scroll-behavior: smooth;
+  line-height: 1.6;
+  color: #666;                /* color gris para todo el texto */
+  scroll-behavior: smooth;    /* hace que los links del menú bajen suavemente */
+  background: #f7d7fe;        /* fondo lila clarito de toda la página */
 }
 
-header {
-  background-color: #bf9bff; /* Fondo claro degradado */
-  height: 200px; 
-    margin: 0;
-    background: linear-gradient(135deg, #bf9bff 0%, #ffffff 100%);
-  
-}
 
-/* Fonts */
+/* =====================================================
+   TIPOGRAFÍA: FUENTES
+   ===================================================== */
 
-.emily-candy {
+/* Clase para títulos con la fuente decorativa importada de Google */
+.title-candy {
   font-family: "Emilys Candy", serif;
-  font-weight: 750;
-  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
   text-align: center;
 }
 
-/* .schoolbell-regular {
-  font-family: "Schoolbell", cursive;
-  font-weight: 400;
-  font-style: normal;
-} */
-
-.h3 {
-  font-weight: 500;
-  font-style: normal;
-}
-.h6 texto{
-  font-weight: 400;
-  font-style: normal;
+h2 {
+  font-size: 2rem;
 }
 
-/* Links */
+h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
 
-.nav{
-  background-image: url("img/seashell_pyrography.png");
+h4 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+p {
+  text-align: justify;  /* el texto queda alineado de los dos lados, como en un libro */
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+
+/* =====================================================
+   HEADER y NAV
+   ===================================================== */
+
+.header {
+  /* IMPORTANTE: cuando querés degradado + imagen de fondo juntos,
+     tienen que ir en una sola propiedad "background-image", separados por coma.
+     La primera capa va ARRIBA (el degradado), la segunda va ABAJO (la foto).
+     Si escribís "background" y "background-image" por separado,
+     la segunda línea pisa a la primera y perdés una de las dos. */
+  background-image:
+    linear-gradient(135deg, rgba(191, 155, 255, 0.6) 0%, rgba(255, 255, 255, 0.3) 100%),
+    url("../img/pyrografia.png");
+  /* El rgba() es igual que un color normal pero con un 4to valor: la opacidad.
+     0 = transparente, 1 = sólido. Con 0.6 el degradado deja ver la imagen de fondo. */
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: center center;
   background-size: cover;
-  background-attachment: fixed;
+
+  min-height: 200px;
+  display: flex;
+  align-items: center;      /* centra verticalmente el contenido */
+  justify-content: space-between; /* logo a la izquierda, menú a la derecha */
+  padding: 0 2rem;
 }
 
-.nav ul {
-list-style: none;
-display: flex;
-gap: 25px;
+/* Logo circular en el header */
+.header-logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;         /* círculo perfecto */
+  object-fit: cover;          /* recorta la imagen para llenar el círculo sin deformarla */
+  border: 3px solid white;    /* borde blanco para que se vea bien sobre la imagen de fondo */
 }
 
-
-.nav a {
-color: #000;
-text-decoration: none;
+.navbar {
+  display: flex;
+  justify-content: flex-end;  /* empuja el menú hacia la derecha */
 }
 
-.nav__links {
+.nav-menu {
+  font-size: 1rem;
   list-style: none;
-
-}
-
-.logo {
-    display: flex;
-    justify-content: right;
-}
-
-.logo img {
-    height: 150px;
-    width: 150px;
-}
-
-.body-container{
-  display: flex;
+  display: flex;      /* pone los items en fila horizontal */
+  gap: 25px;          /* espacio entre cada item */
   padding: 1rem 2rem;
+  border-radius: 15px;
+  /* Fondo semitransparente para que el menú se lea bien sobre la imagen */
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.caja {
+.nav-menu li {
+  list-style: none;
+}
+
+.nav-menu a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+  padding: 5px 10px;
+  border-radius: 5px;
+  transform: translateX(5px); /* mueve el link 5px hacia la derecha al pasar el mouse */
+}
+
+
+/* =====================================================
+   MAIN y HERO (INICIO)
+   ===================================================== */
+
+main {
+  min-height: calc(100vh - 200px);
+  /* calc() hace una cuenta: la altura mínima del main es
+     el 100% de la pantalla menos los 200px del header */
+}
+
+.hero {
+  background: linear-gradient(75deg, #bf9bff 0%, #fff 100%);
+  padding: 2rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+
+/* =====================================================
+   ABOUT (ACERCA DE)
+   ===================================================== */
+
+.about {
+  padding: 2rem;
+}
+
+.about-container {
+  display: flex;      /* pone imagen y texto uno al lado del otro */
+  gap: 2rem;          /* espacio entre la imagen y el texto */
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-logo img {
+  width: 25vw;
+  border-radius: 20px;
+}
+
+.about-text {
+  flex: 1;
+  /* flex: 1 hace que el texto ocupe todo el espacio que sobre
+     después de la imagen */
+}
+
+.about-text h3 {
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   TÉCNICAS
+   ===================================================== */
+
+.techniques {
+  padding: 2rem;
+}
+
+.technique-container {
   display: flex;
-  width: 100%; /* 100% del ancho de la pantalla */
-  height: 25rem; 
-  background-color: white;
-  gap: 1rem;
+  gap: 2rem;
+  align-items: center; /* alinea verticalmente los 3 bloques al centro */
 }
 
-loop{
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
+.technique-item {
+  flex: 1; /* cada columna de texto ocupa el mismo espacio */
 }
 
-.loop-box {
-  display: flex;
+.technique-item ul {
+  list-style-position: inside;
+  padding-left: 1rem;
+}
+
+.technique-item li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.technique-video video {
   width: 100%;
-  justify-content: center;
+  height: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+  /* object-fit: cover hace que el video llene el espacio
+     sin deformarse, recortando lo que sobra */
 }
 
-.loop-video {
-    width: 100%;
-    height: 15rem;
-}
 
-.cuadro {
+/* =====================================================
+   TRABAJOS
+   ===================================================== */
+
+.works {
   display: flex;
-  flex-direction: column;
-  width: 100%; /* 100% del ancho de la pantalla */
-  height: 25rem; 
-  background-color: lightgrey;
+  flex-direction: column; /* apila los elementos verticalmente */
+  padding: 2rem;
+  background-color: #eebeff;
+  gap: 1.5rem;
 }
 
-.arte {
+.works-cta {
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+}
+
+.gallery {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  flex-wrap: wrap;    /* si las fotos no entran en una fila, bajan a la siguiente */
+  min-height: 350px;
+}
+
+.gallery img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;   /* hace que las fotos sean círculos */
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05); /* agranda la foto un 5% al pasar el mouse */
+}
+
+
+/* =====================================================
+   CONTACTO (FORMULARIO + MAPA)
+   ===================================================== */
+
+.contact {
+  display: flex;  /* pone el formulario y el mapa uno al lado del otro */
   width: 100%;
-  height: 500px;
-  background-color: #eebeff;
+  min-height: 350px;
 }
 
-.arte img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-}
-
-/* Formulario */
-
-.form{
-  width: 100%;
-  display: flex;
-}
-
-.cubo {
-  width: 100vw; /* 100% del ancho de la pantalla */
+.contact-form-wrapper {
+  width: 50%;
   background-color: #ae80ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
-.cubo form {
-display: flex;
+.contact-form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem 2rem;
+  gap: 1rem;               /* espacio entre cada campo */
 }
 
-.btn-redondeado {
-    padding: 10px 20px;
-    border-radius: 33px; /* Ajusta valor para bordes redondos */
-    background-color: #8400ff;
-    color: #fff; 
+.contact-form input,
+.contact-form textarea {
+  /* Se pueden agrupar selectores con coma para no repetir código */
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
 }
 
-/* Estilos */
-
-.alineado {
-  text-align-last: center;
+.contact-form textarea {
+  resize: vertical;
+  min-height: 125px;
 }
 
-.decorado {
-  text-decoration: underline;
+/* Botón de enviar con forma de píldora */
+.btn-submit {
+  padding: 12px 24px;
+  border-radius: 33px;
+  background-color: #8400ff;
+  color: #fff;
+  border: none;
+  cursor: pointer;    /* muestra la manito al pasar el mouse */
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-.grande {
-  font-size: 24px;
+/* Efecto de brillo neón en el botón */
+.btn-submit:hover {
+  box-shadow: 0 0 15px #c800ff, 0 0 30px #f200ff;
+  /* Dos sombras separadas por coma: brillo chico + halo grande */
+  transform: translateY(-3px); /* sube el botón 3px hacia arriba */
 }
 
-.negrita {
-  font-weight: bold;
-  font-size: 20px;
+.contact-map {
+  width: 50%;
 }
 
-.color-nombre {
-  color: red;
-}
-
-.color-hexa {
-  color: #c31fff;
-}
-
-.color-nombre,
-.colo-hexa,
-p {
-  font-size: 8px;
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 
+/* =====================================================
+   FOOTER (PIE DE PÁGINA)
+   ===================================================== */
 
-/* Pie de Página */
+.footer {
+  background: linear-gradient(135deg, #933eee 0%, #111 100%);
+  color: #fff;
+  padding: 2rem;
+  margin-top: 2rem;
+}
 
-footer {
-  background-color: #7d0099; /* Fondo oscuro */
-  font-family: Arial, Helvetica, sans-serif;
+.footer-content {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-section h3 {
   color: #fff;
 }
 
-.footer-container{
-  display: flex;
-  padding: 1rem 2rem;
+.footer-logo {
+  max-width: 300px;
+  height: auto;   /* mantiene la proporción original de la imagen */
 }
 
-.footer-box{
+.social-links {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-}
-
-.social-links{
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  text-decoration: none;
-  color: white;
+  gap: 0.75rem;
 }
 
 .social-links a {
-    text-decoration: none;
-  color: white;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #f7d7fe;
+  padding-left: 5px;  /* se desplaza un poquito a la derecha al hacer hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  /* rgba() es como un color hex pero con transparencia:
+     rgba(rojo, verde, azul, opacidad) el 0.3 es 30% opaco */
+  padding-top: 1.5rem;
 }
