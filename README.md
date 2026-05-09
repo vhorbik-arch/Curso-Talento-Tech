@@ -17,10 +17,9 @@ Estructura proyecto/
 │   ├── pyro6.jpg
 │   ├── pyrography.png
 │   └── fotos_logo.png
-
 └── video/
     └── pyro-mate.mp4
-
+    
 ## 🛠️ Tecnologías Utilizadas:
 *   [Lenguaje/Framework] - HTML, CSS, JavaScript
 *   [Herramienta] - Visual Studio Code, Notepad++, Phoenix Code.
